@@ -1,0 +1,2 @@
+self represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. It binds the attributes with the given arguments.
+The reason you need to use self. is because Python does not use the @ syntax to refer to instance attributes.
