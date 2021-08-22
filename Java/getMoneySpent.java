@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class getMoneySpent {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
@@ -10,8 +10,11 @@ public class Solution {
     public static int FindItemCount(){
         Scanner sc=new Scanner(System.in);  
         int b = sc.nextInt();
+        sc.close();
         int n = sc.nextInt();
+        sc.close();
         int m = sc.nextInt();
+        sc.close();
         
         int keyboard[] = new int[n];
         int drives[] = new int[m];
@@ -24,11 +27,13 @@ public class Solution {
         
         for(int i=0;i<n;i++){
             keyboard[i] = sc.nextInt();
+            sc.close();
             if(max_keyboard < keyboard[i]) max_keyboard = keyboard[i];
             if(min_keyboard > keyboard[i]) min_keyboard = keyboard[i];
         }
         for(int j=0;j<m;j++){
             drives[j] = sc.nextInt();
+            sc.close();
             if(max_drives < drives[j]) max_drives = drives[j];
             if(min_drives > drives[j]) min_drives = drives[j];
         }

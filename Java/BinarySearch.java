@@ -2,12 +2,12 @@ import java.util.*;
 
 class BinarySearch {
     public static void main(final String[] args) {
-        List input = new ArrayList<Integer>();
+        ArrayList<Integer> input = new ArrayList<Integer>();
         Scanner scanInput = new Scanner(System.in);
         System.out.println("Enter the array integers till end type eof");
         do {
             input.add(scanInput.nextInt());
-        } while(scanInput.nextLine().charAt(0) != 'c');
+        } while(scanInput.nextLine().charAt(0) != 'e');
         scanInput.close();
         System.out.println("Enter the number to be searched ");
         final int searchValue = scanInput.nextInt();
