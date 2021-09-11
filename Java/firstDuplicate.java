@@ -18,7 +18,6 @@ public class firstDuplicate {
 	}
 	// Indexing each integer in array as each number
 	public static int firstduplicateGoogle(int[] a) {
-		int temp=a.length;
 		for(int i=0;i<a.length;i++) {
 			if(a[Math.abs(a[i]-1)] > 0) a[a[i]-1] = -a[a[i]-1];
 			else if(a[Math.abs(a[i]-1)] < 0){
