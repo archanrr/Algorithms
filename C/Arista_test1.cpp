@@ -5,7 +5,7 @@
 
 // function should add a '\n' to str and return the new str back.
 char* AddNewLineCharToStr(char *s) {
-  char* buffer = (char*) malloc(100*sizeof(char));
+  char* buffer;//= (char*) malloc(100*sizeof(char));
   strcpy(buffer,s);
   //buffer[strlen(s)-4] = 'b';
   buffer[strlen(s)] = 'x';
