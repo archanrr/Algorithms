@@ -1,4 +1,4 @@
-class Backspace_String_Compare_2ndDec2021 {
+class Backspace_String_Compare {
     public boolean backspaceCompare(String s, String t) {
         LinkedList<Character> stack_s = new LinkedList<Character>();
         LinkedList<Character> stack_t = new LinkedList<Character>();
