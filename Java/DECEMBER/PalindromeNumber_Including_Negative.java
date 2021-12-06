@@ -1,3 +1,6 @@
+/*
+find the pallindrome of given number including negative numbers.
+*/
 class PalindromeNumber_Including_Negative {
     public boolean isPalindrome(int x) {
         if(x<0) return false;
