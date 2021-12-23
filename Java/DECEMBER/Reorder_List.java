@@ -20,34 +20,23 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 class Reorder_List {
     public void reorderList(ListNode head) {
         ListNode ptr = head;
-        ListNode prev = head;
+        ListNode start = head;
         Stack<ListNode> stack = new Stack<ListNode>();
         
         while(ptr!=null){
             stack.push(ptr);
-            prev = ptr;
             ptr = ptr.next;
         }
-        ListNode start = head;
         
         start = head;
-        ptr = stack.pop();
-        int count = 0;
-        while(!stack.isEmpty()){
-            count++;
-            ptr.next = start.next;
-            start.next = ptr;
-            start = start.next.next;
-            System.out.println("start "+start.val+" old ptr "+ptr.val);
+        int size = (stack.size()-1)/2;
+        while(size-- >0){
             ptr = stack.pop();
-            ptr.next = null;
-            System.out.println("start "+start.val+" new ptr "+ptr.val);
+            ListNode temp = start.next;
+            start.next = ptr;
+            ptr.next = temp;
+            start = temp;
         }
-        start.next = null;
-        ptr = head;
-        while(ptr!=null && ptr.val!=-100){
-            System.out.print("->"+ptr.val);
-            ptr = ptr.next;
-        }
+        stack.pop().next = null;
     }
 }
