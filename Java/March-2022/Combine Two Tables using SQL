@@ -1,0 +1,8 @@
+/*
+10/03/2022 : 75. Combine Two Tables
+*/
+# Write your MySQL query statement below
+select firstName , lastName , city , state
+from Person  
+Left join Address 
+on Person.personId = Address.personId
