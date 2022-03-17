@@ -1,0 +1,11 @@
+/*
+17/3/2022 : 183. Customers Who Never Order
+Write an SQL query to report all customers who never order anything.
+
+Return the result table in any order.
+*/
+SELECT name AS 'Customers'
+FROM Customers
+LEFT JOIN Orders
+ON Customers.id = Orders.customerId
+WHERE Orders.id IS NULL
